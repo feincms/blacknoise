@@ -156,8 +156,8 @@ async def test_range(bn):
         # assert r.text == "world\n"
 
         r = await client.get("/static/hello.txt", headers={"range": "bytes=2-1"})
-        assert r.status_code == 206
-        assert r.text == ""
+        assert r.status_code == 400  # Byte range is inverted
+        # assert r.text == ""
 
         r = await client.get("/static/hello.txt", headers={"range": "bytes=1-2"})
         assert r.status_code == 206
