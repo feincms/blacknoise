@@ -127,15 +127,15 @@ lint.isort.known-first-party = [
 ]
 
 [tool.coverage]
-run.branch = true
-run.omit = [
-  "src/blacknoise/__about__.py",
-]
-run.parallel = true
 run.source_pkgs = [
   "blacknoise",
   "tests",
 ]
+run.omit = [
+  "src/blacknoise/__about__.py",
+]
+run.branch = true
+run.parallel = true
 paths.blacknoise = [
   "src/blacknoise",
   "*/blacknoise/src/blacknoise",
