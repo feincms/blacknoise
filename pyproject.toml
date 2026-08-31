@@ -39,12 +39,12 @@ urls.Source = "https://github.com/matthiask/blacknoise"
 [tool.hatch]
 version.path = "src/blacknoise/__about__.py"
 envs.all.matrix = [ { python = [
-  "3.10",
-  "3.11",
-  "3.12",
-  "3.13",
-  "3.14",
-] } ]
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14",
+  ] } ]
 envs.default.dependencies = [
   "brotli",
   "coverage[toml]>=6.5",

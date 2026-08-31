@@ -72,6 +72,7 @@ callable to the `BlackNoise` constructor:
 def immutable_file_test(path):
     return True  # Enable far-future expiry headers for all files
 
+
 application = BlackNoise(
     get_asgi_application(),
     immutable_file_test=immutable_file_test,
